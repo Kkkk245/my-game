@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Mein Klick-Spiel</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+  #punktestand { font-size: 2em; margin-bottom: 20px; }
+  button { font-size: 1.5em; padding: 10px 20px; }
+</style>
+</head>
+<body>
+  <div id="punktestand">Punkte: 0</div>
+  <button id="klickButton">Klick mich!</button>
+
+  <script>
+    let punkte = 0;
+    const punktestand = document.getElementById('punktestand');
+    const button = document.getElementById('klickButton');
+
+    button.addEventListener('click', () => {
+      punkte++;
+      punktestand.textContent = 'Punkte: ' + punkte;
+    });
+  </script>
+</body>
+</html>
